@@ -22,7 +22,7 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="SIGN UP"
+            android:text="@string/sign_up"
             android:gravity="center"
             android:fontFamily="@font/barlow_condensed_medium"
             android:textSize="30sp"
@@ -40,7 +40,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="16dp"
-            android:hint="Enter Email"
+            android:hint="@string/enter_email"
             app:boxStrokeColor="@color/theme_grey"
             app:endIconMode="clear_text"
             app:hintTextColor="@color/theme_grey"
@@ -52,7 +52,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -61,7 +62,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="16dp"
-            android:hint="Enter Password"
+            android:hint="@string/enter_password"
             app:boxStrokeColor="@color/theme_grey"
             app:endIconMode="password_toggle"
             app:hintTextColor="@color/theme_grey"
@@ -73,7 +74,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                android:textColorHint="#757575"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
@@ -82,7 +85,7 @@
             android:layout_height="wrap_content"
             android:layout_marginHorizontal="16dp"
             android:layout_marginVertical="16dp"
-            android:hint="Confirm Password"
+            android:hint="@string/confirm_password"
             app:boxStrokeColor="@color/theme_grey"
             app:endIconMode="password_toggle"
             app:hintTextColor="@color/theme_grey"
@@ -94,7 +97,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
-                android:textColor="@color/white" />
+                android:textColor="@color/white"
+                tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
         <com.google.android.material.button.MaterialButton
             android:backgroundTint="@color/purple_500"
@@ -107,7 +111,7 @@
             android:fontFamily="@font/barlow_condensed_medium"
 
             android:padding="10sp"
-            android:text="REGISTER"
+            android:text="@string/register"
             android:textColor="@color/white"/>
 
         <androidx.appcompat.widget.LinearLayoutCompat
@@ -122,7 +126,7 @@
                 android:layout_height="match_parent"
                 android:layout_weight="1"
                 android:gravity="center|end"
-                android:text="Already have an account?"
+                android:text="@string/already_have_an_account"
                 android:layout_margin="5dp"
                 android:fontFamily="@font/barlow_condensed_medium"/>
 
@@ -131,14 +135,14 @@
                 style="@style/Widget.MaterialComponents.Button.TextButton"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center|start|left"
-                android:text="Log In here"
-                app:cornerRadius="2dp"
-                android:textColor="@color/teal_700"
                 android:layout_margin="5dp"
+                android:layout_weight="1"
                 android:fontFamily="@font/barlow_condensed_medium"
-                />
+                android:gravity="center|start"
+                android:text="@string/log_in_here"
+                android:textColor="@color/teal_700"
+                app:cornerRadius="2dp"
+                tools:ignore="TextContrastCheck" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
 
