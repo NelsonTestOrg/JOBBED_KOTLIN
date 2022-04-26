@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:theme="@style/Theme.Material3.DayNight.NoActionBar"
+    style="@style/Theme.Material3.DayNight.NoActionBar"
     tools:context=".login_activity">
 
     <androidx.appcompat.widget.LinearLayoutCompat
@@ -17,14 +17,15 @@
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/log_in"
-            android:gravity="center"
             android:fontFamily="@font/barlow_condensed_medium"
-            android:textSize="30sp"
-            />
+            android:gravity="center"
+            android:text="@string/log_in"
+            android:textSize="30sp" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="1.3dp"
@@ -43,14 +44,13 @@
             app:boxStrokeColor="@color/theme_grey"
             app:endIconMode="clear_text"
             app:hintTextColor="@color/theme_grey"
-            >
+            app:startIconDrawable="@drawable/ic_baseline_email_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_email"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textEmailAddress"
-                android:textColor="@color/white"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -65,14 +65,13 @@
             app:boxStrokeColor="@color/theme_grey"
             app:endIconMode="password_toggle"
             app:hintTextColor="@color/theme_grey"
-            >
+            app:startIconDrawable="@drawable/ic_baseline_vpn_key_24">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:id="@+id/login_password"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:inputType="textPassword"
-                android:textColor="@color/white"
                 android:textColorHint="#757575"
                 tools:ignore="TextContrastCheck" />
         </com.google.android.material.textfield.TextInputLayout>
@@ -84,28 +83,57 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:layout_margin="16dp"
-            app:cornerRadius="2dp"
-            android:fontFamily="@font/barlow_condensed_medium"
             android:backgroundTint="@color/purple_500"
+            android:fontFamily="@font/barlow_condensed_medium"
             android:padding="10sp"
             android:text="@string/sign_in"
-            android:textColor="@color/white"/>
+            android:textColor="@color/white"
+            app:cornerRadius="2dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Other sign in options"
+            android:drawableBottom="@drawable/ic_baseline_arrow_downward_24"
+            android:fontFamily="@font/barlow_condensed_medium"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:layout_margin="20dp"
+            />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:id="@+id/google_signIn"
+                >
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Google"
+                    android:gravity="center"
+                    android:fontFamily="@font/barlow_condensed_medium"
+                    android:layout_margin="10dp"
+                    android:drawableTop="@drawable/google_icon"
+                    />
+            </com.google.android.material.card.MaterialCardView>
+
+
 
         <androidx.appcompat.widget.LinearLayoutCompat
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
-            android:weightSum="2"
-            >
+            android:weightSum="2">
 
             <com.google.android.material.textview.MaterialTextView
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:gravity="center|end"
-                android:text="@string/don_t_have_an_account"
                 android:layout_margin="5dp"
-                android:fontFamily="@font/barlow_condensed_medium"/>
+                android:layout_weight="1"
+                android:fontFamily="@font/barlow_condensed_medium"
+                android:gravity="center|end"
+                android:text="@string/don_t_have_an_account" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/sign_up_link"
@@ -121,7 +149,6 @@
                 app:cornerRadius="2dp" />
 
         </androidx.appcompat.widget.LinearLayoutCompat>
-
 
 
     </androidx.appcompat.widget.LinearLayoutCompat>
