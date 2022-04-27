@@ -27,7 +27,7 @@ class register_activity : AppCompatActivity() {
         loginLink.setOnClickListener{
             val intent = Intent(this@register_activity, login_activity::class.java)
             startActivity(intent)
-            finish()
+
         }
 
         registerButton.setOnClickListener {

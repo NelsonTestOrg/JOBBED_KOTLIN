@@ -8,8 +8,16 @@ import android.widget.Button
 import android.widget.Toast
 import com.google.android.material.textfield.TextInputEditText
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 class login_activity : AppCompatActivity() {
+
+    private lateinit var auth: FirebaseAuth
+
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -85,5 +93,18 @@ class login_activity : AppCompatActivity() {
 
 
         }
-    }
+
+   }
+//    override fun onStart() {
+//        auth = Firebase.auth
+//        super.onStart()
+//        // Check if user is signed in (non-null) and update UI accordingly.
+//        val currentUser = auth.currentUser
+//        updateUI(currentUser)
+//    }
+//
+//    private fun updateUI(currentUser: FirebaseUser?) {
+//        val intent = Intent(this, MainActivity::class.java)
+//        startActivity(intent)
+//    }
 }

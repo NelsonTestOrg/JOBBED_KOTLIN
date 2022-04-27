@@ -12,4 +12,8 @@
     <string name="sign_up">SIGN UP</string>
     <string name="already_have_an_account">Already have an account?</string>
     <string name="register">REGISTER</string>
+    <string name="google">Google</string>
+    <string name="facebook">Facebook</string>
+    <string name="twitter">Twitter</string>
+    <string name="more_sign_up_options">More sign up options</string>
 </resources>
